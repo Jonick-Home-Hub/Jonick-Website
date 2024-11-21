@@ -1,0 +1,461 @@
+    .actives{
+      background-color: #42a5f5;
+    }
+    
+    /* Main sidenav hover effect - blue lighten-1 */
+    #mobile-demo li > a {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      
+      #mobile-demo li > a::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: #42a5f5; /* Blue lighten-1 */
+        width: 0;
+        transition: width 0.3s;
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        transform: translateX(-50%);
+      }
+      
+      #mobile-demo li > a:hover::after {
+        width: 100%;
+      }
+      
+      /* Services sidenav hover effect - orange lighten-1 */
+      #services-sidenav li > a {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      
+      #services-sidenav li > a::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: #ef6c00; /* Orange lighten-1 */
+        width: 0;
+        transition: width 0.3s;
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        transform: translateX(-50%);
+      }
+      
+      #services-sidenav li > a:hover::after {
+        width: 100%;
+      }
+          nav a {
+        color: white; /* Existing styles */
+        font-size: 1.2rem; /* Existing styles */
+        font-weight: 700; /* Existing styles */
+        position: relative; /* Needed for the pseudo-element */
+        margin-left:4px;
+      }
+      
+      nav a::after {
+        content: '';
+        display: block;
+        height: 2px; /* Adjust thickness of the border */
+        background-color: #42a5f5; /* Blue lighten-1 color */
+        width: 0;
+        transition: width 0.3s; /* Smooth transition */
+        position: absolute;
+        left: 50%;
+        bottom: -5px; /* Position it below the text */
+        transform: translateX(-50%);
+      }
+      
+      nav a:hover::after {
+        width: 100%; /* Expands to full width on hover */
+      }
+      
+      
+          body {
+            font-family: 'Playfair Display', serif; /* Apply Playfair Display */
+          }
+          nav a {
+        color: white; /* Change text color for better contrast */
+        font-size: 1.2rem; /* Increase font size for readability */
+        /* font-weight: 700;  */
+      }
+      .sidenav li>a{
+        font-size: 1.2rem; /* Increase font size for readability */
+        font-weight: 700; /* Make font bolder */
+        margin-top: 15px;
+      }
+
+          @media screen and (max-width: 767px) {
+            .brand-logo img {
+              width: 200px;
+            }
+          }
+         
+          .sidenav-close-icon {
+            padding: 6px 20px;
+            cursor: pointer;
+          }
+          .dropdown-row {
+        display: flex; /* Use flexbox for the first row */
+        justify-content: space-between; /* Space items evenly */
+        width: 100%; /* Make sure it takes full width */
+      }
+      
+      .dropdown-content {
+        padding: 10px; /* Optional: Add padding */
+      }
+      
+      .dropdown-content li {
+        flex: 1; /* Allow items to grow equally */
+        text-align: center; /* Center align text */
+        margin: 5px; /* Space between items */
+      }
+      
+          #services-dropdown {
+          width: 100% !important;
+          left: 0 !important;
+          top: 75px !important;
+          }
+      
+          .dropdown-content li>a, .dropdown-content li>span {
+          color: rgb(72, 69, 69);
+      }
+
+      /* General Section Styling */
+.about-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9fbe7 0%, #fff3e0 100%);
+  }
+  
+  .about-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: #ef6c00;
+  }
+  
+  /* Image and Overlay Styling */
+  .image-container {
+    position: relative;
+    width: 100%;
+ margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height:392px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay .icon {
+    font-size: 2.5rem;
+    animation: icon-bounce 1.5s infinite alternate;
+  }
+  
+  /* Bounce Animation for Icons */
+  @keyframes icon-bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Responsive Text Alignment */
+  .about-section .center-align {
+    text-align: center;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #5d4037;
+  }
+  
+  .btn-large {
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+  }
+  
+
+  /* Scroll Up Button Styles */
+.scroll-up-btn {
+  position: fixed;
+  right: 20px; /* Distance from the right edge */
+  bottom: 30px; /* Distance from the bottom */
+  background-color:  #ef6c00; /* Color of the button */
+  border-radius: 50%; /* Make it round */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* Remove underline */
+  color: white; /* Color of the icon */
+  z-index: 1000; /* Ensure it is on top */
+}
+
+.scroll-up-btn:hover {
+  background-color: #42a5f5; /* Change color on hover */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.marquee {
+  overflow: hidden; /* Hide anything outside this container */
+  white-space: nowrap; /* Prevent line breaks */
+  background-color: #fff; /* Background color of the marquee */
+}
+
+.marquee-content {
+  display: inline-block; /* Allows images to sit next to each other */
+  animation: marquee 15s linear infinite; /* Adjust the duration for speed */
+}
+
+.marquee-image {
+  width: 200px; /* Adjust based on your design */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 15px; /* Space between images */
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marquee-image {
+      width: 150px; /* Smaller images for smaller screens */
+  }
+}
+.marquee:hover .marquee-content {
+  animation-play-state: paused; /* Pause the animation */
+}
+
+.why-choose {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: auto;
+  /* background-color: #f9f9f9; */
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.reason {
+  transition: transform 0.3s ease;
+}
+
+.reason:hover {
+  transform: translateY(-10px);
+}
+
+.card-content i.material-icons.large {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #42a5f5;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+
+/* Footer Enhancements */
+.page-footer {
+  padding-top: 30px;
+}
+
+.page-footer .row {
+  margin-bottom: 0;
+}
+
+.page-footer .social-icons a {
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.page-footer .social-icons a:hover {
+  color: #ff4081; /* Customize this highlight color */
+}
+
+    /* Mission and Vision */
+    .mission-vision {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      animation: fadeIn 1.5s ease;
+    }
+    .mission-vision h3 {
+      color: #42a5f5;
+    }
+
+    .testimonial {
+      display: none;
+      min-width: 100%;
+      text-align: center;
+      padding: 60px;
+      opacity: 0; /* Start as invisible */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .testimonial.active {
+      display: block;
+      opacity: 1; /* Make active testimonial visible */
+  }
+
+    
+  .testimonial img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+    
+.section {
+    padding: 50px 20px;
+    
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.card-panel {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.mission-card {
+    border-left: 5px solid #42a5f5; /* Accent color for mission */
+}
+
+.vision-card {
+    border-left: 5px solid  #ef6c00; 
+}
+
+.card-panel:hover {
+    transform: scale(1.02); /* Slight zoom on hover for interactivity */
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .card-panel {
+        margin-bottom: 20px; /* Space between cards on smaller screens */
+    }
+}
+
+/* Pro CSS */
+.pro-link {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-weight: 500;
+  margin-top: 5px;
+  color: white; /* White text */
+  border: 2px solid black; /* Thin border */
+  height: 50px; /* Fixed height */
+  border-radius: 4px; /* Slight rounding for modern touch */
+  text-decoration: none;
+  font-size: 20px; /* Font size for readability */
+  background-color: #42a5f5; /* Background color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .brand-logo img {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .brand-logo img {
+    width: 242px;
+    margin-top: 10px !important;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+  .brand-logo img {
+    width: 232px;
+    margin-top: 10px !important;
+  }
+}
+
+.brand-logo img {
+  margin-top: 6px;
+}
+
+i.sidenav-close.right{
+  color: #ef6c00;
+}
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+      left: 55%;
+  }
+}
+
+.activess{
+  background-color: #ef6c00;
+}
+
+/* END OF PRO CSS */

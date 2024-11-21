@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <title>Contact Us - Jonick Home Hub</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
+  .page-footer {
+    padding-top: 118px;
+    height: 649px;
+}
+}
+
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+
+  </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="orange darken-3">
+    <div class="nav-wrapper container">
+      <span class="brand-logo">
+        <img src="images/icon.png" alt="">
+      </span>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <li><a href="contact.html" class="activess">Contact</a></li>
+        <li><a href="pro.html" class="pro-link">Become a Pro</a></li>
+
+
+      </ul>
+    </div>
+  </nav>
+<!-- Dropdown Structure for Desktop -->
+<ul id="services-dropdown" class="dropdown-content">
+<div class="dropdown-row">
+  <li><a href="plumbing.html">Plumbing</a></li>
+  <li><a href="handy.html">Handyman Service</a></li>
+  <li><a href="remodeling.html">Home Remodeling</a></li>
+ 
+</div>
+<div class="dropdown-row">
+  <li><a href="electrical.html">Electrical</a></li>
+  <li><a href="outdoor.html">Outdoor Services</a></li>
+  <li><a href="clean.html">Cleaning & Maintenance</a></li>
+
+</div>
+<div class="dropdown-row">
+  <li><a href="carpet.html" >Carpentry & Assembly</a></li>
+  <li><a href="floor.html">Flooring & HVAC</a></li>
+  <li><a href="wall.html">Wall Enhancements</a></li>
+</div>
+</ul>
+
+  <!-- Mobile Nav -->
+  <ul class="sidenav " id="mobile-demo" >
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a href="index.html" >Home</a></li>
+    <li><a class="sidenav-trigger" href="#!" data-target="services-sidenav">Services<i class="material-icons right">chevron_right</i>
+    </a></li>
+    <li><a href="contact.html" class="activess">Contact</a></li>
+    <li><a href="pro.html" class="pro-link btn blue blue-lighten-1">Become a Pro</a></li>
+  </ul>
+
+  <!-- Services Sidenav -->
+  <ul class="sidenav blue lighten-1" id="services-sidenav">
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a class="sidenav-close" href="#!"><i class="material-icons">arrow_back</i> Back</a></li>
+    <li><a href="plumbing.html">Plumbing</a></li>
+    <li><a href="handy.html">Handyman Service</a></li>
+    <li><a href="remodeling.html">Home Remodeling</a></li>
+    <li><a href="electrical.html">Electrical</a></li>
+    <li><a href="outdoor.html">Outdoor Services</a></li>
+    <li><a href="clean.html">Cleaning & Maintenance</a></li>
+    <li><a href="carpet.html">Carpentry & Assembly</a></li>
+    <li><a href="floor.html">Flooring & HVAC</a></li>
+    <li><a href="wall.html">Wall Enhancements</a></li>
+  </ul>
+  <section class="contact">
+    <div class="container">
+      <h3 class="center-align">Contact Us</h3>
+      <h4 style="font-size: 20px">We're here to help! If you have any questions or need assistance, simply fill out the form below, and our team will get back to you as soon as possible. </h4>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 m12 s12 l6 ">
+                        <img src="images/cont.jpg" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <form action="">
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="name" type="text" class="validate" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">call</i>
+                                <input id="number" type="number" class="validate" required>
+                                <label for="number">Phone Number</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">edit</i>
+                                <textarea name="message" id="msg" cols="30" rows="10" class="materialize-textarea"></textarea>
+                                <label for="msg">Message</label>
+                            </div>
+                            <button class="btn waves-effect waves-light" style="background-color: #ef6c00;;" type="submit" name="action">Send Message
+                              <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+ <!-- Add this to your HTML file -->
+<footer class="page-footer" style="background-color: #343a40;">
+  <div class="container">
+      <div class="row">
+          <!-- About Section -->
+          <div class="col l4 s12">
+              <h5 class="white-text">About Us</h5>
+              <p class="grey-text text-lighten-4">
+                  Jonick Home Hub is committed to delivering top-notch solutions that drive success for our clients. We blend quality, innovation, and a client-focused approach in everything we do.
+              </p>
+          </div>
+          
+          <!-- Quick Links Section -->
+          <div class="col l4 s12">
+              <h5 class="white-text">Quick Links</h5>
+              <ul>
+                  <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="blog.html">Blog</a></li>
+                  <li><a class="grey-text text-lighten-3" href="pro.html">Become a Professional</a></li>
+              </ul>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="col l4 s12">
+              <h5 class="white-text">Contact</h5>
+              <ul class="grey-text text-lighten-3">
+                  <li><i class="material-icons tiny">location_on</i>4449 Penn St, Philadelphia, PA 19124</li>
+                  <li><i class="material-icons tiny">phone</i> +123 456 7890</li>
+                  <li><i class="material-icons tiny">email</i> info@jonickservices.com</li>
+              </ul>
+              <!-- Social Media Icons -->
+              <div class="social-icons">
+                <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-linkedin"></i></a>
+                <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="footer-copyright">
+      <div class="container center-align">
+          © 2024 Jonick Home Hub. All rights reserved.
+      </div>
+  </div>
+</footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/contact.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    var selectElems = document.querySelectorAll('select');
+    M.FormSelect.init(selectElems);
+  }, 100); // 100ms delay
+});
+
+  </script>
+</body>
+</html>

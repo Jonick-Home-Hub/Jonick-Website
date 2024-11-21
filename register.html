@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    h4 {
+      color: #42A5F5;
+    }
+
+    button.btn {
+      background-color: #ef6c00;
+    }
+
+    .btn:hover {
+      background-color: #42A5F5 !important; /* Orange color */
+      box-shadow: none; /* Optional: Remove the shadow if you don't want it */
+    }
+
+    .btn:focus, .btn:active {
+      background-color: #ef6c00 !important;  /* Orange color */
+      box-shadow: none !important;
+    }
+
+    .file-path-wrapper input {
+      color: #42A5F5;
+    }
+
+    .circular-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #42A5F5;
+      color: white;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+    .circular-btn i {
+      font-size: 20px;
+    }
+
+    .file-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .file-path-wrapper {
+      flex-grow: 1;
+    }
+
+    .input-field {
+      margin-bottom: 30px;
+    }
+
+    label {
+      color: #42A5F5;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h4 class="center-align">Become a Professional</h4>
+    <p class="center-align">Show the world what you're made of. Become a professional today!</p>
+
+    <form id="pro-registration-form" enctype="multipart/form-data" novalidate>
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h5>Personal Information</h5>
+        <div class="input-field">
+          <input type="text" id="full_name" name="full_name" pattern="[A-Za-z ]+" required>
+          <label for="full_name">Full Name</label>
+          <span class="error-message" id="full_name_error"></span>
+        </div>
+        <div class="input-field">
+          <input type="date" id="dob" name="dob" required>
+          <label for="dob">Date of Birth</label>
+          <span class="error-message" id="dob_error"></span>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email Address</label>
+          <span class="error-message" id="email_error"></span>
+        </div>
+        <div class="input-field">
+          <input type="tel" id="phone" name="phone" pattern="^\+?[0-9]{10,15}$" required>
+          <label for="phone">Phone Number</label>
+          <span class="error-message" id="phone_error"></span>
+        </div>
+      </div>
+
+      <!-- Professional Information -->
+      <div class="form-section">
+        <h5>Professional Information</h5>
+        <div class="input-field">
+          <select id="expertise" name="expertise[]" multiple required>
+            <option value="" disabled>Choose your expertise</option>
+
+            <option value="Plumbing">Plumbing</option>
+            <option value="Handyman Service">Handyman Service</option>
+            <option value="Home Remodeling">Home Remodeling</option>
+            <option value="Electrical">Electrical</option>
+
+            <option value="Outdoor Services">Outdoor Services</option>
+            <option value="Cleaning & Maintenance">Cleaning & Maintenance</option>
+            <option value="Carpentry & Assembly">Carpentry & Assembly</option>
+            <option value="Flooring & HVAC">Flooring & HVAC</option>
+            <option value="Wall Enhancements">Wall Enhancements</option>
+          </select>
+          <label for="expertise">Areas of Expertise</label>
+          <span class="error-message" id="expertise_error"></span>
+        </div>
+        <div class="input-field">
+          <input type="number" id="experience" name="experience" min="0" required>
+          <label for="experience">Years of Experience</label>
+          <span class="error-message" id="experience_error"></span>
+        </div>
+
+        <!-- File upload section with icon button -->
+        <div class="file-field input-field">
+          <div class="circular-btn">
+            <i class="material-icons">add</i>
+            <input type="file" id="portfolio" name="portfolio[]" accept=".jpg, .jpeg, .png, .gif, .webp" multiple required>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Upload portfolio images">
+          </div>
+        </div>
+        <span class="error-message" id="portfolio_error"></span>
+      </div>
+
+      <!-- Verification -->
+      <div class="form-section">
+        <h5>Verification</h5>
+        <div class="file-field input-field">
+          <div class="circular-btn">
+            <i class="material-icons">add</i>
+            <input type="file" id="gov_id" name="gov_id" accept=".jpg, .jpeg, .png, .pdf" required>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Upload government-issued ID">
+          </div>
+        </div>
+        <span class="error-message" id="gov_id_error"></span>
+
+        <div class="file-field input-field">
+          <div class="circular-btn">
+            <i class="material-icons">add</i>
+            <input type="file" id="address_proof" name="address_proof" accept=".jpg, .jpeg, .png, .pdf" required>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Upload proof of address">
+          </div>
+        </div>
+        <span class="error-message" id="address_proof_error"></span>
+      </div>
+
+      <!-- Agreement -->
+      <p>
+        <label>
+          <input type="checkbox" id="agree" name="agree" required>
+          <span>I agree to the <a href="#">terms and conditions</a>.</span>
+        </label>
+        <span class="error-message" id="agree_error"></span>
+      </p>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-large">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  
+  <!-- JavaScript Functions -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      M.FormSelect.init(document.querySelectorAll('select'));
+    });
+
+    // Form Validation
+    const form = document.getElementById('pro-registration-form');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let isValid = true;
+
+      // Clear previous error messages
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+     // Validate Full Name: Allows letters and symbols, but not numbers
+const fullName = document.getElementById('full_name');
+const fullNamePattern = /^[A-Za-z\s'-]+$/; // Allows letters, spaces, apostrophes, and hyphens
+if (!fullName.value.trim() || !fullNamePattern.test(fullName.value)) {
+  document.getElementById('full_name_error').textContent = 'Full Name should only contain letters, spaces, apostrophes, and hyphens.';
+  isValid = false;
+}
+
+
+      // Validate Date of Birth: Must not be empty
+      const dob = document.getElementById('dob');
+      if (!dob.value.trim()) {
+        document.getElementById('dob_error').textContent = 'Date of Birth is required.';
+        isValid = false;
+      }
+
+      // Validate Email: Must be a valid email
+      const email = document.getElementById('email');
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailPattern.test(email.value)) {
+        document.getElementById('email_error').textContent = 'Please enter a valid email address.';
+        isValid = false;
+      }
+
+      // Validate Phone: Must match the phone number pattern
+      const phone = document.getElementById('phone');
+      const phonePattern = /^\+?[0-9]{10,15}$/;
+      if (!phone.value.trim() || !phonePattern.test(phone.value)) {
+        document.getElementById('phone_error').textContent = 'Please enter a valid phone number.';
+        isValid = false;
+      }
+
+      // Validate Expertise: Must select at least one expertise
+      const expertise = document.getElementById('expertise');
+      if (expertise.selectedOptions.length === 0) {
+        document.getElementById('expertise_error').textContent = 'Please select at least one area of expertise.';
+        isValid = false;
+      }
+
+      // Validate Years of Experience: Must be a positive number
+      const experience = document.getElementById('experience');
+      if (experience.value.trim() === '' || experience.value < 0) {
+        document.getElementById('experience_error').textContent = 'Years of experience must be a non-negative number.';
+        isValid = false;
+      }
+
+      // Validate file inputs (portfolio, gov_id, address_proof)
+      const filesRequired = ['portfolio', 'gov_id', 'address_proof'];
+      filesRequired.forEach(id => {
+        const fileInput = document.getElementById(id);
+        if (!fileInput.files.length) {
+          document.getElementById(`${id}_error`).textContent = 'This file is required.';
+          isValid = false;
+        }
+      });
+
+      // Checkbox validation
+      const agree = document.getElementById('agree');
+      if (!agree.checked) {
+        document.getElementById('agree_error').textContent = 'You must agree to the terms.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Form submitted successfully!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become A Professional - Jonick Home Hub</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/pro.css">
+  <style>
+    .row .col.s12 {
+    margin-top: 32px;
+}
+    body {
+      background-color: #f9f9f9;
+      /* margin-bottom: 52px; */
+      padding: 0;
+    }
+    .hero-section {
+      background-color: #42A5F5; /* Brand color */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+    .info-card {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: start;
+    }
+    .info-card i {
+      font-size: 3rem;
+      color: #42A5F5;
+      margin-right: 15px;
+    }
+    .info-card h5 {
+      margin: 0;
+      color: #ef6c00;
+    }
+    .testimonial-section {
+      margin-top: 50px;
+      padding: 30px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+    }
+    .testimonial-section h5 {
+      color: #ef6c00;
+      margin-bottom: 20px;
+    }
+    .testimonial {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial strong {
+      display: block;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    .requirements-section h5 {
+      color: #ef6c00;
+      margin-bottom: 10px;
+    }
+    .requirements-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .requirements-section ul li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    .requirements-section ul li::before {
+      content: "✔";
+      color: #42A5F5;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+    .register-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .register-btn a {
+      background-color: #42A5F5;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .register-btn a:hover {
+      background-color: #ef6c00;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="orange darken-3">
+    <div class="nav-wrapper container">
+      <span class="brand-logo">
+        <img src="images/icon.png" alt="">
+      </span>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pro.html" class="pro-link">Become a Pro</a></li>
+
+
+      </ul>
+    </div>
+  </nav>
+<!-- Dropdown Structure for Desktop -->
+<ul id="services-dropdown" class="dropdown-content">
+<div class="dropdown-row">
+  <li><a href="plumbing.html">Plumbing</a></li>
+  <li><a href="handy.html">Handyman Service</a></li>
+  <li><a href="remodeling.html">Home Remodeling</a></li>
+ 
+</div>
+<div class="dropdown-row">
+  <li><a href="electrical.html">Electrical</a></li>
+  <li><a href="outdoor.html">Outdoor Services</a></li>
+  <li><a href="clean.html">Cleaning & Maintenance</a></li>
+
+</div>
+<div class="dropdown-row">
+  <li><a href="carpet.html" >Carpentry & Assembly</a></li>
+  <li><a href="floor.html">Flooring & HVAC</a></li>
+  <li><a href="wall.html">Wall Enhancements</a></li>
+</div>
+</ul>
+
+  <!-- Mobile Nav -->
+  <ul class="sidenav " id="mobile-demo" >
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a href="index.html" >Home</a></li>
+    <li><a class="sidenav-trigger" href="#!" data-target="services-sidenav">Services<i class="material-icons right">chevron_right</i>
+    </a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="pro.html" class="pro-link btn blue blue-lighten-1">Become a Pro</a></li>
+  </ul>
+
+  <!-- Services Sidenav -->
+  <ul class="sidenav blue lighten-1" id="services-sidenav">
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a class="sidenav-close" href="#!"><i class="material-icons">arrow_back</i> Back</a></li>
+    <li><a href="plumbing.html">Plumbing</a></li>
+    <li><a href="handy.html">Handyman Service</a></li>
+    <li><a href="remodeling.html">Home Remodeling</a></li>
+    <li><a href="electrical.html">Electrical</a></li>
+    <li><a href="outdoor.html">Outdoor Services</a></li>
+    <li><a href="clean.html">Cleaning & Maintenance</a></li>
+    <li><a href="carpet.html">Carpentry & Assembly</a></li>
+    <li><a href="floor.html">Flooring & HVAC</a></li>
+    <li><a href="wall.html">Wall Enhancements</a></li>
+</ul>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h2>Unlock Opportunities with Jonick Home Hub!</h2>
+    <p>Explore countless local job options and take control of your work schedule.</p>
+  </div>
+
+  <!-- Info Section -->
+  <div class="container">
+    <div class="row info-section">
+      <!-- Image -->
+      <div class="col s12 m12 l6">
+        <img src="images/handyguys.webp" alt="Professional Work" class="responsive-img">
+      </div>
+
+      <!-- Info Cards -->
+      <div class="col s12 m12 l6">
+        <div class="info-card">
+          <i class="material-icons">attach_money</i>
+          <div>
+            <h5>Earn More</h5>
+            <p>Enjoy competitive earnings with added perks like bonuses and tips for exceptional performance!</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="material-icons">schedule</i>
+          <div>
+            <h5>Work Your Way</h5>
+            <p>Set your own hours and workload. Whether you’re building a full-time schedule or picking up occasional gigs, the choice is yours.</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="material-icons">credit_card</i>
+          <div>
+            <h5>Hassle-Free Payments</h5>
+            <p>Get paid seamlessly! Your earnings are securely transferred directly to your account—no follow-ups needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonial-section">
+      <h5>Hear From Our Professionals</h5>
+      <div class="testimonial">
+        <p>"I love the freedom to choose jobs that fit my day. Plus, I never have to worry about finding clients or handling payments—it’s all taken care of!"</p>
+        <strong>– Alex, Home Service Expert, Chicago</strong>
+      </div>
+    </div>
+
+    <!-- Requirements Section -->
+    <div class="requirements-section">
+      <h5>Requirements</h5>
+      <ul>
+        <li>Previous experience in your chosen service area is required.</li>
+        <li>Must have legal authorization to work in the country of application.</li>
+        <li>Strong customer service skills are essential for success.</li>
+      </ul>
+    </div>
+
+    <!-- Register Button -->
+    <div class="register-btn">
+      <a href="register.html" target="_blank">Register Now</a>
+    </div>
+  </div>
+
+  <br><br><br>
+   <!-- Add this to your HTML file -->
+<footer class="page-footer" style="background-color: #343a40;">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="grey-text text-lighten-4">
+                    Jonick Home Hub is committed to delivering top-notch solutions that drive success for our clients. We blend quality, innovation, and a client-focused approach in everything we do.
+                </p>
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="blog.html">Blog</a></li>
+                    <li><a class="grey-text text-lighten-3" href="pro.html">Become a Professional</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Contact</h5>
+                <ul class="grey-text text-lighten-3">
+                    <li><i class="material-icons tiny">location_on</i>4449 Penn St, Philadelphia, PA 19124</li>
+                    <li><i class="material-icons tiny">phone</i> +123 456 7890</li>
+                    <li><i class="material-icons tiny">email</i> info@jonickservices.com</li>
+                </ul>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-linkedin"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+        <div class="container center-align">
+            © 2024 Jonick Home Hub. All rights reserved.
+        </div>
+    </div>
+  </footer>
+  
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/pro.js"></script>
+</body>
+</html>

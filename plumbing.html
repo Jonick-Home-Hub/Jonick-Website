@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plumbing</title>
+ <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="css/plumbing.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="orange darken-3">
+    <div class="nav-wrapper container">
+      <span class="brand-logo">
+        <img src="images/icon.png" alt="">
+      </span>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pro.html" class="pro-link">Become a Pro</a></li>
+
+
+      </ul>
+    </div>
+  </nav>
+<!-- Dropdown Structure for Desktop -->
+<ul id="services-dropdown" class="dropdown-content">
+<div class="dropdown-row">
+  <li><a href="plumbing.html" class="actives">Plumbing</a></li>
+  <li><a href="handy.html">Handyman Service</a></li>
+  <li><a href="remodeling.html">Home Remodeling</a></li>
+ 
+</div>
+<div class="dropdown-row">
+  <li><a href="electrical.html">Electrical</a></li>
+  <li><a href="outdoor.html">Outdoor Services</a></li>
+  <li><a href="clean.html">Cleaning & Maintenance</a></li>
+
+</div>
+<div class="dropdown-row">
+  <li><a href="carpet.html" >Carpentry & Assembly</a></li>
+  <li><a href="floor.html">Flooring & HVAC</a></li>
+  <li><a href="wall.html">Wall Enhancements</a></li>
+</div>
+</ul>
+
+  <!-- Mobile Nav -->
+  <ul class="sidenav " id="mobile-demo" >
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a href="index.html" >Home</a></li>
+    <li><a class="sidenav-trigger" href="#!" data-target="services-sidenav">Services<i class="material-icons right">chevron_right</i>
+    </a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="pro.html" class="pro-link btn blue blue-lighten-1">Become a Pro</a></li>
+  </ul>
+
+  <!-- Services Sidenav -->
+  <ul class="sidenav blue lighten-1" id="services-sidenav">
+    <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+    <li><a class="sidenav-close" href="#!"><i class="material-icons">arrow_back</i> Back</a></li>
+    <li><a href="plumbing.html" class="activess">Plumbing</a></li>
+    <li><a href="handy.html">Handyman Service</a></li>
+    <li><a href="remodeling.html">Home Remodeling</a></li>
+    <li><a href="electrical.html">Electrical</a></li>
+    <li><a href="outdoor.html">Outdoor Services</a></li>
+    <li><a href="clean.html">Cleaning & Maintenance</a></li>
+    <li><a href="carpet.html">Carpentry & Assembly</a></li>
+    <li><a href="floor.html">Flooring & HVAC</a></li>
+    <li><a href="wall.html">Wall Enhancements</a></li>
+  </ul>
+
+    <!-- Slider -->
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="images/bathroom-plumb.webp" alt="Image 1" style="filter: brightness(0.8);"> <!-- Image 1 -->
+      <div class="caption center-align">
+        <h3>Plumbing Services!</h3>
+        <h5 class="light grey-text text-lighten-3">Quality Solutions For Your Home</h5>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="container">
+
+  <p class="services-intro">We provide a variety of reliable and professional plumbing services to meet all your needs. From installations to repairs, our team is here to ensure you receive top-quality solutions.</p>
+  <div class="services-list">
+    <div class="service-item">
+      <i class="fas fa-tools"></i> Drain Repair
+    </div>
+    <div class="service-item">
+      <i class="fas fa-faucet"></i> Faucet Installation
+    </div>
+    <div class="service-item">
+      <i class="fas fa-wrench"></i> Faucet Repair
+    </div>
+    <div class="service-item">
+      <i class="fas fa-water"></i> Pipe Leak Repair <!-- Changed icon to "fa-water" -->
+    </div>
+    <div class="service-item">
+      <i class="fas fa-bath"></i> Sink Replacement <!-- Changed icon to "fa-bath" -->
+    </div>
+    <div class="service-item">
+      <i class="fas fa-toilet"></i> Toilet Repair
+    </div>
+    <div class="service-item">
+      <i class="fas fa-toilet"></i> Toilet Replacement <!-- Changed icon to "fa-toilet" -->
+    </div>
+    <div class="service-item">
+      <i class="fas fa-hand-paper"></i> Unclog Toilet <!-- Changed icon to "fa-hand-paper" -->
+    </div>
+  </div>
+  <br>
+
+  <div class="call-to-action">
+    <p class="cta-message">You want an amazing job done? <b>Book us now</b> and choose which services you want!</p>
+    <a href="#" class="cta-button"><span>Get Started</span></a>
+  </div>
+
+  </div>
+<br><br><br><br><br><br><br><br><br>
+<div class="container">
+  <div class="services-banner">
+    <div class="ribbon">
+        <span>Discover Our Exceptional Plumbing Services!</span>
+    </div>
+</div>
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/drained.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Drain Repair<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Drain Repair 🟠<i class="material-icons right">close</i></span>
+                  <p>Our expert team provides top-notch drain repair services, tackling blockages and leaks with precision. Using state-of-the-art equipment, we ensure your drainage system operates flawlessly, restoring peace of mind to your home.</p>
+                  <p>Restore the efficiency of your drainage system with our comprehensive drain repair services. Benefits include:</p>
+                  <ol>
+                    <li>Thorough inspection to identify blockages and leaks.</li>
+                    <li>Use of advanced tools and techniques for effective repairs.</li>
+                    <li>Prevention of future drainage issues.</li>
+                    <li>Quick response time to minimize disruption.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/Faucet _Repair.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Faucet Repair<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Faucet Repair 🟠<i class="material-icons right">close</i></span>
+                  <p>Don’t let a dripping faucet disrupt your daily routine! Our prompt and reliable faucet repair service will have your faucet running smoothly in no time, saving you money on water bills and enhancing your comfort.</p>
+                  <ol>
+                    <li>Quick diagnosis of common faucet problems.</li>
+                    <li>Skilled repairs to restore functionality.</li>
+                    <li>Long-lasting solutions to prevent recurrence.</li>
+                    <li>Improvement in water flow and pressure.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/Faucet.png">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Faucet Installation <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Faucet Installation 🟠<i class="material-icons right">close</i></span>
+                  <p>Transform your kitchen or bathroom with our professional faucet installation. We help you choose the perfect style and functionality, ensuring a seamless integration with your plumbing system. Experience convenience and elegance today!</p>
+                  <ol>
+                    <li>Wide selection of stylish and functional faucets.</li>
+                    <li>Expert guidance on choosing the right fit for your space.</li>
+                    <li>Seamless installation for optimal performance.</li>
+                    <li>Increased water efficiency to lower your bills.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/pipe.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Pipe Leak Repair<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Pipe Leak Repair 🟠<i class="material-icons right">close</i></span>
+                   <p>Pipe leaks can lead to costly damage if not addressed promptly. Our specialists conduct thorough inspections and provide effective repairs, safeguarding your home from water damage and ensuring the integrity of your plumbing system.</p>
+                   <ol>
+                    <li>Comprehensive leak detection to identify issues early.</li>
+                    <li>Professional repairs using high-quality materials for long-lasting results.</li>
+                    <li>Preventative measures to avoid future leaks and plumbing issues.</li>
+                    <li>Quick response times to restore your plumbing without delay.</li>
+                   </ol>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/sink.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Sink Replacement<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Sink Replacement 🟠<i class="material-icons right">close</i></span>
+                  <p>Upgrade your space with our quality sink replacement services. We offer a variety of stylish options that not only enhance your decor but also provide the functionality you need. Let’s make your kitchen or bathroom shine!</p>
+                  <ol>
+                    <li>A variety of designs and materials to suit your style.</li>
+                    <li>Professional installation for a perfect fit.</li>
+                    <li>Enhanced functionality with modern features.</li>
+                    <li>Increased property value with stylish upgrades.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/uncloged.avif">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Unclog Toilet<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Unclog Toilet 🟠<i class="material-icons right">close</i></span>
+                  <p>When your toilet is clogged, don’t panic! Our skilled team uses effective techniques to unclog your toilet quickly and efficiently, restoring functionality and ensuring your peace of mind.</p>
+                  <ol>
+                    <li>Fast and efficient unclogging to minimize disruption in your home.</li>
+                    <li>Use of specialized equipment for thorough and safe clog removal.</li>
+                    <li>Expert advice on preventing future clogs and maintaining your plumbing.</li>
+                    <li>Reliable service with a satisfaction guarantee for your peace of mind.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/toilet-installation.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Toilet Installation<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Toilet Installation 🟠<i class="material-icons right">close</i></span>
+                  <p>Ready to upgrade your bathroom with a new toilet? Our expert team offers professional toilet installation services tailored to your needs. We ensure a seamless installation process, providing you with a reliable and efficient toilet that enhances your bathroom experience.</p>
+                  <p>Why choose our toilet installation services?</p>
+                  <ol>
+                    <li>Expert installation by certified professionals for optimal performance.</li>
+                    <li>Wide selection of modern and efficient toilet models to fit your style.</li>
+                    <li>Leak-proof installation to prevent future water damage.</li>
+                    <li>Thorough testing post-installation to ensure everything is functioning perfectly.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+        <div class="col l6 m6 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/toilet-repair.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Toilet Repair<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">🟠 Toilet Repair 🟠<i class="material-icons right">close</i></span>
+                  <p>Facing toilet troubles? Our experienced plumbers quickly diagnose and repair common issues, ensuring your toilet operates efficiently. Say goodbye to clogs and leaks, and hello to a smoothly functioning bathroom!</p>
+                  <ol>
+                    <li>Fast identification of the root cause of problems.</li>
+                    <li>Expert repairs for leaks, clogs, and flushing issues.</li>
+                    <li>Maintenance tips to prolong toilet lifespan.</li>
+                    <li>Restoration of comfort and efficiency in your bathroom.</li>
+                </ol>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!-- FAQs Section -->
+<section class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>1. What plumbing services do you provide?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">We offer a comprehensive range of plumbing services, including drain repairs, faucet installations, pipe leak fixes, toilet unclogging, sink replacements, and more.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>2. Are your plumbing services backed by a warranty?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Absolutely! All our services come with a satisfaction guarantee, ensuring that we meet your expectations.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>3. How can I schedule my plumbing appointment?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Scheduling an appointment is easy! Simply scroll up and click the "Get Started" button to choose your services.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>4. Do you offer emergency plumbing services?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Yes, we are available 24/7 for emergency plumbing services to address urgent issues whenever they arise.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>5. What geographical areas do you serve?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">We proudly service the greater metropolitan area along with surrounding suburbs to ensure your plumbing needs are met.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>6. How quickly can you respond to plumbing emergencies?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Our team aims to respond to plumbing emergencies within an hour, ensuring prompt assistance when you need it most.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>7. Are your plumbers licensed and insured?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Yes, all of our plumbers are fully licensed and insured, providing you with peace of mind and professionalism.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span>8. Can I get a free estimate for my plumbing project?</span>
+            <a class="icon addition">+</a>
+        </div>
+        <div class="accordion-body">Definitely! We offer free estimates for all our plumbing services, allowing you to plan your budget effectively.</div>
+    </div>
+</div>
+
+</section>
+
+<!-- Add this to your HTML file -->
+<footer class="page-footer" style="background-color: #343a40;">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="grey-text text-lighten-4">
+                    Jonick Services is committed to delivering top-notch solutions that drive success for our clients. We blend quality, innovation, and a client-focused approach in everything we do.
+                </p>
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Contact</h5>
+                <ul class="grey-text text-lighten-3">
+                    <li><i class="material-icons tiny">location_on</i> 123 Main St, City, Country</li>
+                    <li><i class="material-icons tiny">phone</i> +123 456 7890</li>
+                    <li><i class="material-icons tiny">email</i> info@jonickservices.com</li>
+                </ul>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-linkedin"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-google"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+        <div class="container center-align">
+            © 2024 Jonick Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+<!-- Scroll Up Button -->
+<a href="#" id="scroll-up" class="scroll-up-btn">
+  <span class="material-icons">arrow_upward</span>
+</a>
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/plumbing.js"></script>
+
+</body>
+</html>

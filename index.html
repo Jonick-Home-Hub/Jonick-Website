@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+
+  <style>
+    /* .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.742)), url("images/backhome.webp");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: auto;
+      min-height: 100vh;
+    } */
+    .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.742)), url(images/backhome.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    min-height: 100vh; /* Ensures minimum height of the viewport */
+    display: block;
+    position: relative; /* Ensure correct positioning of background */
+}
+
+/* Optional: To handle some edge cases where small screens or specific devices are problematic */
+@media only screen and (width: 640px) and (height: 360px) {
+    .hero {
+        height: auto; /* Allow auto height for smaller screens */
+        min-height: 150vh; /* Keep the minimum height at 100% of the viewport */
+    }
+}
+
+
+
+    .top-banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%); /* Start above the screen */
+  width: 33%; /* Default width for larger screens */
+  height: 100vh; /* Full height of the screen */
+  background-color: #ef6c00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.5s ease;
+}
+
+/* Banner Content */
+.banner-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.banner-image-container {
+  width: 100%;
+  height: 60%; /* Default height for image container */
+  overflow: hidden; /* Ensures the image doesn't overflow */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image fits inside the container without cutting off any part */
+  object-position: top center; /* Align the image to the top to avoid cutting off the head */
+}
+
+.banner-text {
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 40%; /* Default space for text */
+}
+
+.banner-button {
+  background-color: #42A5F5;
+  display: inline-block;
+  color: #ffffff;
+  padding: 12px 30px; /* Ample padding for a large button */
+  font-size: 1rem; /* Slightly larger font size */
+  font-weight: 600; /* Bold font */
+  text-transform: uppercase; /* Capitalize text */
+  border-radius: 25px; /* Fully rounded edges for a modern look */
+  box-shadow: 0px 5px 10px rgba(0, 123, 255, 0.4); /* Glow effect */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* .banner-button:hover {
+  background-color: #0056b3;
+} */
+
+  /* Add a higher z-index to the close button to ensure it's clickable */
+  .close-button {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1100; /* Make sure it's above other elements */
+    transition: background-color 0.3s ease;
+  }
+
+
+.close-button:hover {
+  color: #ddd;
+}
+
+/* Show banner when active */
+.top-banner.active {
+  transform: translateX(-50%) translateY(0); /* Slide down into view */
+}
+@media only screen and (width: 820px) and (height: 1180px) {
+  .hero-content{
+  margin-top: 30%;
+ }
+}
+/* Responsive Styles */
+@media only screen and (width: 800px) and (height: 1280px) {
+ .banner-image{
+  margin-top: 27px !important;
+ }
+}
+@media only screen and (width: 1024px) and (height: 1366px) {
+  /* Banner Content */
+.banner-content {
+  width: 100%;
+  height: 70% !important;
+
+}
+.hero-content{
+  margin-top: 30%;
+ }
+.top-banner {
+  width: 43% !important; /* Default width for larger screens */
+  height: 60vh !important; /* Full height of the screen */
+
+}
+.container {
+        width: 73% !important;
+    }
+
+    .pro-link {
+    margin-left: 2px !important;
+}
+}
+/* For screens around 1280x800 */
+@media only screen and (min-width: 1260px) and (max-width: 1300px) {
+  .top-banner {
+    width: 45%; 
+  }
+}
+
+
+@media only screen and (width: 1024px) and (height: 600px) {
+  /* Your styles for 1024x600 screens */
+  .top-banner {
+    /* Add styles specific to 1024x600 here */
+    width: 45% !important;
+  }
+}
+@media only screen and (width: 1280px) and (height: 800px) {
+  /* Your styles for 1280x800 screens */
+  .top-banner {
+    /* Add styles specific to 1280x800 here */
+    width: 45% !important;
+  }
+}
+/* General screens wider than 1023px */
+@media (min-width: 1023px) {
+  .top-banner {
+    width: 33%;
+    height: 100vh; 
+    padding: 30px;
+  }
+
+  .banner-image-container {
+    height: 60%; /* Maintain the image height */
+  }
+
+  .banner-text {
+    max-height: 40%; /* Text space remains the same */
+  }
+}
+
+/* Medium Screens (between 768px and 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .top-banner {
+    width: 70%; /* Adjust width for medium screens */
+    height: 70vh; /* Adjust height */
+    padding: 20px;
+  }
+
+  .banner-image-container {
+    height: 60%; /* Adjust image height */
+  }
+
+  .banner-text {
+    max-height: 40%; /* Allow more space for text */
+  }
+
+  .close-button {
+    top: 5px;
+    right: 10px;
+  }
+
+  .banner-button {
+    padding: 10px 20px; /* Adjust button size */
+  }
+}
+
+/* Small Screens (below 768px) */
+@media (max-width: 768px) {
+  .top-banner {
+    width: 90%; /* Increase width for small screens */
+    height: 50vh; /* Adjust height for better view */
+    padding: 15px;
+  }
+
+  .banner-image-container {
+    height: 100%; /* Allow image container to use full height */
+  }
+
+  .banner-text {
+    max-height: 50%; /* Allow more space for text */
+  }
+
+  .banner-button {
+    padding: 8px 16px; /* Smaller button size */
+  }
+}
+
+/* Very Small Screens (below 480px) */
+@media (max-width: 480px) {
+  .top-banner {
+    width: 90%; /* Increase width further for tiny screens */
+    height: 50vh; /* Adjust height */
+  }
+
+  .banner-image-container {
+    height: 100%; /* Keep image height at full */
+  }
+
+  .banner-text {
+    max-height: 50%; /* Give more space to text */
+  }
+
+  .banner-button {
+    padding: 8px 12px; /* Further adjust button size */
+  }
+}
+
+/* Customize the Scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    height: 8px; /* Set the height of the scrollbar for horizontal scroll */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Gray color for the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Scrollbar Handle Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.banner-text p {
+  line-height: 1.9; /* Improved readability with line spacing */
+}
+
+  </style>
+
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: 'YOUR_FACEBOOK_APP_ID', // Replace with your Facebook App ID
+        cookie: true,
+        xfbml: true,
+        version: 'v12.0'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Google SDK -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+
+  <div class="top-banner" id="topBanner">
+    <span class="close-button" onclick="closeBanner()">✖</span>
+    <div class="banner-content">
+      <div class="banner-image-container">
+        <img src="images/hand.webp" alt="Banner Image" class="banner-image">
+      </div>
+      <div class="banner-text">
+        <h6 class="center-align white-text" style="font-weight: bold; font-size: 22px;">Are You a Top-Rated Professional?</h6>
+        <p>
+            We’re constantly seeking skilled service professionals, from cleaners to handymen to smart home installers, who are dedicated to delivering outstanding service. Join us to connect with clients without any lead fees and enjoy consistent job opportunities.</p>
+       <center>
+       <a href="pro.html">
+        <button class="banner-button">Learn More</button>
+       </a>
+       </center>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="hero">
+       <!-- Navbar -->
+       <nav class="z-depth-0 transparent">
+        <div class="nav-wrapper container">
+          <span class="brand-logo">
+            <img src="images/icon.png" alt="">
+          </span>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <a class="dropdown-trigger" data-target="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a>
+          </li>
+          
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+            <li><a href="pro.html" class="pro-link">Register as a Pro</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+  <!-- Dropdown Structure for Desktop -->
+  <ul id="services-dropdown" class="dropdown-content">
+    <div class="dropdown-row">
+      <li><a href="plumbing.html">Plumbing</a></li>
+      <li><a href="handy.html">Handyman Service</a></li>
+      <li><a href="remodeling.html">Home Remodeling</a></li>
+     
+    </div>
+    <div class="dropdown-row">
+      <li><a href="electrical.html">Electrical</a></li>
+      <li><a href="outdoor.html">Outdoor Services</a></li>
+      <li><a href="clean.html">Cleaning & Maintenance</a></li>
+     
+    
+    </div>
+    <div class="dropdown-row">
+      <li><a href="carpet.html">Carpentry & Assembly</a></li>
+      <li><a href="floor.html">Flooring & HVAC</a></li>
+      <li><a href="wall.html">Wall Enhancements</a></li>
+    </div>
+  </ul>
+  
+      <!-- Mobile Nav -->
+      <ul class="sidenav" id="mobile-demo" >
+        <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+        <li><a href="index.html" class="activess">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="sidenav-trigger" href="#!" data-target="services-sidenav">Services<i class="material-icons right">chevron_right</i>
+        </a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pro.html" class="pro-link btn blue blue-lighten-1">Register as a Pro</a></li>
+      </ul>
+  
+      <!-- Services Sidenav -->
+      <ul class="sidenav blue lighten-1" id="services-sidenav">
+        <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+        <li><a class="sidenav-close" href="#!"><i class="material-icons">arrow_back</i> Back</a></li>
+        <li><a href="plumbing.html">Plumbing</a></li>
+        <li><a href="handy.html">Handyman Service</a></li>
+        <li><a href="remodeling.html">Home Remodeling</a></li>
+        <li><a href="electrical.html">Electrical</a></li>
+        <li><a href="outdoor.html">Outdoor Services</a></li>
+        <li><a href="clean.html">Cleaning & Maintenance</a></li>
+        <li><a href="carpet.html">Carpentry & Assembly</a></li>
+        <li><a href="floor.html">Flooring & HVAC</a></li>
+        <li><a href="wall.html">Wall Enhancements</a></li>
+      </ul>
+
+    <!-- Hero Section -->
+    <div class="hero-content container">
+      <h1>Reliable Home Services at Your Fingertips</h1>
+      <a class="btn-large waves-effect waves-light blue lighten-1" id="login-button">Login</a>
+      <a href="signup.html" class="btn-large waves-effect waves-light orange darken-3">Signup</a>
+    </div>
+  </div>
+
+  <!-- Login Modal Structure -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h4 class="modal-title">Login</h4>
+      <form id="login-form" onsubmit="clearForm(event)">
+        <div class="input-field">
+          <input type="email" id="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" required>
+          <label for="password">Password</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light blue lighten-1">Submit</button>
+      </form>
+      <p>or login with:</p>
+      <button id="fb-login-btn" class="btn waves-effect waves-light" style="background-color: #3b5998;">Facebook</button>
+      <button id="google-login-btn" class="btn waves-effect waves-light  orange darken-3">Google</button>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/home.js"></script>
+  <script async defer src="https://apis.google.com/js/api:client.js?onload=onLoad"></script>
+  <script>
+window.onload = function() {
+  // Check if the user has visited before using localStorage
+  if (!localStorage.getItem("visited")) {
+    // This is the first visit
+    setTimeout(function() {
+      document.getElementById("topBanner").classList.add("active");
+    }, 1000); // Show after 1 second for the first visit
+
+    // Set the 'visited' flag so subsequent visits are recognized
+    localStorage.setItem("visited", "true");
+
+    // Add a close button functionality for the first visit
+    const closeButton = document.querySelector('.close-button');
+    closeButton.addEventListener('click', closeBanner); // Close when clicking the close button
+  } else {
+    // This is a subsequent visit
+    setTimeout(function() {
+      // Show the banner after 3 seconds
+      document.getElementById("topBanner").classList.add("active");
+
+      // Automatically close after 10 seconds
+      setTimeout(function() {
+        document.getElementById("topBanner").classList.remove("active");
+      }, 20000); // Close after 10 seconds (10000 milliseconds)
+    }, 3000); // Show after 3 seconds for subsequent visits
+  }
+};
+
+// Function to manually close the banner when the close button is clicked
+function closeBanner() {
+  document.getElementById("topBanner").classList.remove("active");
+}
+
+
+  </script>
+</body>
+</html>

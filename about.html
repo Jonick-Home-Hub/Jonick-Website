@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+ <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/about.css">
+
+  <style>
+    
+  /* Set the container height for larger screens */
+.parallax-container {
+  position: relative;
+  height: 500px;
+}
+
+.parallax img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 992px) {
+  .parallax-container {
+    height: 400px;
+  }
+  .parallax-text h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parallax-container {
+    height: 300px;
+  }
+  .parallax-text h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="orange darken-3">
+  <div class="nav-wrapper container">
+    <span class="brand-logo">
+      <img src="images/icon.png" alt="">
+    </span>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="pro.html" class="pro-link">Become a Pro</a></li>
+
+
+    </ul>
+  </div>
+</nav>
+<!-- Dropdown Structure for Desktop -->
+<ul id="services-dropdown" class="dropdown-content">
+<div class="dropdown-row">
+<li><a href="plumbing.html">Plumbing</a></li>
+<li><a href="handy.html">Handyman Service</a></li>
+<li><a href="remodeling.html">Home Remodeling</a></li>
+
+</div>
+<div class="dropdown-row">
+<li><a href="electrical.html">Electrical</a></li>
+<li><a href="outdoor.html">Outdoor Services</a></li>
+<li><a href="clean.html">Cleaning & Maintenance</a></li>
+
+</div>
+<div class="dropdown-row">
+<li><a href="carpet.html" >Carpentry & Assembly</a></li>
+<li><a href="floor.html">Flooring & HVAC</a></li>
+<li><a href="wall.html">Wall Enhancements</a></li>
+</div>
+</ul>
+
+<!-- Mobile Nav -->
+<ul class="sidenav " id="mobile-demo" >
+  <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+  <li><a href="index.html" >Home</a></li>
+  <li><a class="sidenav-trigger" href="#!" data-target="services-sidenav">Services<i class="material-icons right">chevron_right</i>
+  </a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="pro.html" class="pro-link btn blue blue-lighten-1">Become a Pro</a></li>
+</ul>
+
+<!-- Services Sidenav -->
+<ul class="sidenav blue lighten-1" id="services-sidenav">
+  <li class="sidenav-close-icon"><i class="material-icons sidenav-close right">close</i></li>
+  <li><a class="sidenav-close" href="#!"><i class="material-icons">arrow_back</i> Back</a></li>
+  <li><a href="plumbing.html">Plumbing</a></li>
+  <li><a href="handy.html">Handyman Service</a></li>
+  <li><a href="remodeling.html">Home Remodeling</a></li>
+  <li><a href="electrical.html">Electrical</a></li>
+  <li><a href="outdoor.html">Outdoor Services</a></li>
+  <li><a href="clean.html">Cleaning & Maintenance</a></li>
+  <li><a href="carpet.html">Carpentry & Assembly</a></li>
+  <li><a href="floor.html">Flooring & HVAC</a></li>
+  <li><a href="wall.html">Wall Enhancements</a></li>
+</ul>
+
+    <!-- Slider -->
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="images/aboutone.webp" alt="Image 1" style="filter: brightness(0.5);"> <!-- Image 1 -->
+      <div class="caption center-align">
+        <h3>Welcome to Our About Page!</h3>
+        <h5 class="light grey-text text-lighten-3">Discover quality and dedication.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="images/about.webp" alt="Image 2" style="filter: brightness(0.6);"> <!-- Image 2 -->
+      <div class="caption left-align">
+        <h3>Professional Cleaning</h3>
+        <h5 class="light grey-text text-lighten-3">We make spaces shine.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="images/abouttwo.jpeg" alt="Image 3" style="filter: brightness(0.6);"> <!-- Image 3 -->
+      <div class="caption right-align">
+        <h3>Handyman Services</h3>
+        <h5 class="light grey-text text-lighten-3">Reliable support at your fingertips.</h5>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- About Section -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l6">
+        <h4 class="orange-text text-darken-3 center-align">Who We Are</h4>
+        <p class="flow-text grey-text text-darken-4" style="text-align: justify;">
+          With over 20 years of experience, our trusted general contracting company specializes in residential and commercial projects. We offer a wide range of services, including remodeling, plumbing, electrical work, carpentry, and landscaping. Our skilled team is dedicated to delivering quality workmanship and timely service, ensuring that every project meets the highest standards.</p>
+          <p class="flow-text grey-text text-darken-4" style="text-align: justify;">Customer satisfaction is our priority, and we ensure clear communication throughout every project. We focus on budget-friendly solutions that deliver results without compromising quality. Whether you want to transform your home or need reliable repairs, contact us today to schedule a consultation!</p>
+      </div>
+      <div class="col s12 m12 l6">
+        <div class="image-container">
+          <img src="images/aboutfour.webp" alt="About Us" class="responsive-img materialboxed">
+          <div class="overlay">
+            <span class="material-icons white-text icon">thumb_up</span>
+            <span class="material-icons white-text icon">handyman</span>
+            <span class="material-icons white-text icon">star</span>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+ <section id="mission-vision" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card-panel mission-card">
+                    <h5 class="section-title">Our Mission</h5>
+                    <p>
+                      We deliver solutions that empower clients to meet their goals, combining quality, precision, and confidence.
+                    </p>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card-panel vision-card">
+                    <h5 class="section-title">Our Vision</h5>
+                    <p>
+                      Leading the industry with integrity and transforming lives through technology and customer-first practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+
+<section class="why-choose" style="font-family: Gabriela, serif; font-weight: 400; font-style: normal; line-height: 1.5; font-size: 17px;">
+  <div class="container">
+      <h2>Why Jonick Home Hub Stands Out</h2>
+      <div class="row">
+          <div class="col s12 m12 l3">
+              <div class="card hoverable reason">
+                  <div class="card-content">
+                      <i class="material-icons large center orange-text text-darken-3" >star</i>
+                      <p class="center-align">Exceptional Quality</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m12 l3">
+              <div class="card hoverable reason">
+                  <div class="card-content">
+                      <i class="material-icons large center orange-text text-darken-3" >group</i>
+                      <p class="center-align">Client-Focused</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m12 l3">
+              <div class="card hoverable reason">
+                  <div class="card-content">
+                      <i class="material-icons large center orange-text text-darken-3" >build</i>
+                      <p class="center-align">Innovative Solutions</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m12 l3">
+              <div class="card hoverable reason">
+                  <div class="card-content">
+                      <i class="material-icons large center orange-text text-darken-3" >verified</i>
+                      <p class="center-align">Proven Track Record</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="testimonial-slider" style="background-color: #f9f9f9;">
+  <h4 class="center-align orange-text text-darken-3" style="padding-top: 100px;">What Our Clients Say</h4>
+  <div class="testimonial active">
+    <img src="images/city.jpg" alt="Client">
+    <h5>"Jonick Services transformed our workflow and exceeded expectations!" - Jane Doe, CEO</h5>
+  </div>
+  <div class="testimonial">
+    <img src="images/ai.jpg" alt="Client">
+    <h5>"The team was professional and committed from start to finish." - John Smith, COO</h5>
+  </div>
+  <div class="testimonial">
+    <img src="images/street.jpg" alt="Client">
+    <h4>"Their innovative approach helped us stay ahead of the competition." - Sarah Lee, CTO</h4>
+  </div>
+  <div class="testimonial">
+    <img src="images/street.jpg" alt="Client">
+    <h5>"Their innovative approach helped us stay ahead of the competition." - Sarah Lee, CTO</h5>
+  </div>
+  <div class="testimonial">
+    <img src="images/street.jpg" alt="Client">
+    <h5>"Their innovative approach helped us stay ahead of the competition." - Sarah Lee, CTO</h5>
+  </div>
+</div>
+
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="images/happy.jpeg" alt="Happy Family at Home">
+  </div>
+  <div class="parallax-text">
+   
+    <p>Experience the joy of a perfectly maintained home—where every corner reflects your style, every repair is handled with care, and every moment is spent in comfort. Join countless satisfied families who have discovered the Jonick difference, where quality workmanship meets heartfelt service. Let us help you build a happy home, one project at a time.</p>
+  </div>
+</div>
+
+
+<section style="padding-top: 70px; height:500px">
+  <div class="container"><h2  class="blue-text text-lighten-1" style="font-family: 'Playfair Display', serif;">Our Partners</h2>
+  <p>We partner with companies to ensure their customers have easy access to all the appliances and equipment needed for reliable home repair services.</p>
+</div>
+  <div class="marquee">
+    <div class="marquee-content">
+        <img src="images/city.jpg" alt="Image 1" class="marquee-image">
+        <img src="images/city.jpg" alt="Image 2" class="marquee-image">
+        <img src="images/city.jpg" alt="Image 3" class="marquee-image">
+        <img src="images/city.jpg" alt="Image 4" class="marquee-image">
+        <img src="images/city.jpg" alt="Image 5" class="marquee-image">
+    </div>
+  </div>
+</section>
+
+
+<!-- Add this to your HTML file -->
+<footer class="page-footer" style="background-color: #343a40;">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="grey-text text-lighten-4">
+                    Jonick Services is committed to delivering top-notch solutions that drive success for our clients. We blend quality, innovation, and a client-focused approach in everything we do.
+                </p>
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="col l4 s12">
+                <h5 class="white-text">Contact</h5>
+                <ul class="grey-text text-lighten-3">
+                    <li><i class="material-icons tiny">location_on</i> 123 Main St, City, Country</li>
+                    <li><i class="material-icons tiny">phone</i> +123 456 7890</li>
+                    <li><i class="material-icons tiny">email</i> info@jonickservices.com</li>
+                </ul>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-linkedin"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-google"></i></a>
+                  <a class="icon blue-text text-lighten-3" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+        <div class="container center-align">
+            © 2024 Jonick Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+<!-- Scroll Up Button -->
+<a href="#" id="scroll-up" class="scroll-up-btn">
+  <span class="material-icons">arrow_upward</span>
+</a>
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/about.js"></script>
+
+<script>
+  let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+
+function showNextTestimonial() {
+    testimonials[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % testimonials.length; // Loop back to the first testimonial
+    testimonials[currentIndex].classList.add('active');
+}
+
+// Change testimonial every 5 seconds
+setInterval(showNextTestimonial, 2000);
+
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+
+</script>
+
+</body>
+</html>
