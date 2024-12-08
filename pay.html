@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Jonick Home Hub</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="pay.css">
+</head>
+<body>
+
+
+  <main class="container">
+    <div class="card booking-card">
+      <h4 class="center-align orange-text">Book Your Service</h4>
+      <p class="center-align grey-text text-darken-1">Select your services, fill out your details, and let us handle the rest!</p>
+
+      <form id="bookingForm">
+        <!-- Service Selection -->
+        <h5 class="form-section-title">Choose Your Services</h5>
+        <div class="row">
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="50" value="Plumbing" />
+              <span>Plumbing - $50</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="40" value="Handyman Service" />
+              <span>Handyman Service - $40</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="80" value="Home Remodeling" />
+              <span>Home Remodeling - $80</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="60" value="Electrical" />
+              <span>Electrical - $60</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="45" value="Outdoor Services" />
+              <span>Outdoor Services - $45</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="35" value="Cleaning & Maintenance" />
+              <span>Cleaning & Maintenance - $35</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="15" value="Cleaning & Maintenance" />
+              <span>Wall Enhancements- $15</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="25" value="Cleaning & Maintenance" />
+              <span>Flooring & HVAC - $25</span>
+            </label>
+          </div>
+          <div class="col s12 m6 l4">
+            <label>
+              <input type="checkbox" class="filled-in service-checkbox" data-price="30" value="Cleaning & Maintenance" />
+              <span>Carpentry & Assembly - $30</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Total Cost -->
+        <h5 class="center-align">Total Cost: <span id="totalCost" class="blue-text">$0</span></h5>
+
+        <!-- Date, Time, and Address -->
+        <div class="input-field">
+          <input type="text" id="date" class="datepicker" placeholder="Select Date" required>
+          <label for="date">Date</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="time" class="timepicker" placeholder="Select Time" required>
+          <label for="time">Time</label>
+        </div>
+        <div class="input-field">
+          <textarea id="address" class="materialize-textarea" placeholder="Enter Your Address" required></textarea>
+          <label for="address">Address</label>
+        </div>
+
+        <!-- User Info -->
+        <div class="input-field">
+          <input type="text" id="name" placeholder="Your Name" required pattern="[A-Za-z\s]+" title="Only letters are allowed">
+          <label for="name">Full Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" placeholder="Your Email Address" required>
+          <label for="email">Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="tel" id="phone" placeholder="Your Phone Number" required pattern="[\d\s\+\-]+" title="Phone number must contain only digits and symbols like +, -, and spaces">
+          <label for="phone">Phone Number</label>
+        </div>
+
+        <!-- Country and State Selection -->
+        <div class="input-field">
+            <select id="country" required>
+              <option value="" disabled selected>Choose your country</option>
+            </select>
+            <label for="country">Country</label>
+          </div>
+        <div class="input-field">
+          <input type="text" id="state" placeholder="Enter Your State" required pattern="[A-Za-z\s]+" title="Only letters are allowed">
+          <label for="state">State</label>
+        </div>
+
+        <!-- Verification -->
+        <p>
+          <label>
+            <input type="checkbox" id="verificationCheckbox" required />
+            <span>I confirm the details provided are correct.</span>
+          </label>
+        </p>
+
+        <!-- Submit Button -->
+        <button class="btn-large orange waves-effect waves-light" id="submitBtn" disabled>Submit Booking</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Materialize JS -->
+   <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="pay.js"></script>
+  
+</body>
+</html>

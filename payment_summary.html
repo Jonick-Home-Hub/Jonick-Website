@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Summary - Jonick Home Hub</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* Overall page styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #e0e7ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(236, 108, 0, 0.1), rgba(66, 165, 245, 0.1));
+    }
+
+    /* Container for the payment summary */
+    .summary-container {
+      width: 100%;
+      max-width: 800px;
+      background-color: white;
+      padding: 30px 40px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ef6c00;
+      margin-bottom: 20px;
+    }
+
+    .summary-section {
+      margin-bottom: 30px;
+    }
+
+    /* Section headers */
+    .summary-header {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #ef6c00;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* User and service details list styling */
+    .summary-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .summary-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f4f4f4;
+    }
+
+    .summary-list li span {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* Total cost section */
+    .total-cost {
+      font-size: 24px;
+      font-weight: 700;
+      color: #42a5f5;
+      background-color: #f3f8fd;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    /* Proceed button */
+    .proceed-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #ef6c00;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .proceed-btn:hover {
+      background-color: #e65100;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive for mobile screens */
+    @media (max-width: 768px) {
+      .summary-container {
+        padding: 25px 15px;
+      }
+
+      h4 {
+        font-size: 26px;
+      }
+
+      .summary-header {
+        font-size: 16px;
+      }
+
+      .summary-list li {
+        font-size: 14px;
+      }
+
+      .total-cost {
+        font-size: 18px;
+      }
+
+      .proceed-btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="summary-container">
+      <h4>Payment Summary</h4>
+
+      <!-- User Information -->
+      <div class="summary-section">
+        <div class="summary-header">User Information</div>
+        <ul class="summary-list" id="userSummary">
+          <!-- User details will be populated here -->
+        </ul>
+      </div>
+
+      <!-- Selected Services -->
+      <div class="summary-section">
+        <div class="summary-header">Selected Services</div>
+        <ul class="summary-list" id="servicesSummary">
+          <!-- Services will be populated here -->
+        </ul>
+      </div>
+
+      <!-- Total Cost -->
+      <div class="total-cost">
+        Total Cost: <span id="totalCost"></span>
+      </div>
+
+      <!-- Proceed Button -->
+      <button class="proceed-btn" onclick="window.location.href='payment_gateway.html'">Proceed to Payment</button>
+    </div>
+  </main>
+
+  <script>
+    const userData = JSON.parse(sessionStorage.getItem('userData'));
+
+    if (userData) {
+      // User Information Section
+      document.getElementById('userSummary').innerHTML = `
+        <li><span>Name:</span> ${userData.name}</li>
+        <li><span>Email:</span> ${userData.email}</li>
+        <li><span>Phone:</span> ${userData.phone}</li>
+        <li><span>Address:</span> ${userData.address}</li>
+        <li><span>Country:</span> ${userData.country}</li>
+        <li><span>State:</span> ${userData.state}</li>
+        <li><span>Date:</span> ${userData.date}</li>
+        <li><span>Time:</span> ${userData.time}</li>
+      `;
+
+      // Selected Services Section
+      document.getElementById('servicesSummary').innerHTML = `
+        ${userData.services.map(service => `<li>${service}</li>`).join('')}
+      `;
+
+      // Total Cost Section
+      document.getElementById('totalCost').textContent = `$${userData.totalCost}`;
+    } else {
+      alert('No user data found!');
+    }
+  </script>
+
+</body>
+</html>
