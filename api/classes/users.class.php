@@ -6,7 +6,7 @@ class Users extends DatabaseObject
     static protected $table_name = "users";
 
     // Database columns
-    static protected $db_columns = ['id', 'name', 'email', 'password', 'phone', 'role', 'created_at', 'updated_at'];
+    static protected $db_columns = ['ID', 'NAME', 'EMAIL', 'PASSWORD', 'PHONE', 'ROLE', 'CREATED_AT', 'UPDATED_AT'];
 
     // Class properties for each column
     public $id;
@@ -21,21 +21,21 @@ class Users extends DatabaseObject
     // Constructor
     public function __construct($args = [])
     {
-        $this->id = $args['id'] ?? null;
-        $this->name = $args['name'] ?? '';
-        $this->email = $args['email'] ?? '';
-        $this->password = $args['password'] ?? '';
-        $this->phone = $args['phone'] ?? '';
-        $this->role = $args['role'] ?? 'user'; // Default role is 'user'
-        $this->created_at = $args['created_at'] ?? null;
-        $this->updated_at = $args['updated_at'] ?? null;
+        $this->id = $args['ID'] ?? null;
+        $this->name = $args['NAME'] ?? '';
+        $this->email = $args['EMAIL'] ?? '';
+        $this->password = $args['PASSWORD'] ?? '';
+        $this->phone = $args['PHONE'] ?? '';
+        $this->role = $args['ROLE'] ?? 'user'; // Default role is 'user'
+        $this->created_at = $args['CREATED_AT'] ?? date('Y-m-d H:i:s');
+        $this->updated_at = $args['UPDATED_AT'] ?? date('Y-m-d H:i:s');
     }
 
     // Register a new user
     static public function register($data)
     {
         $passwordHash = new PasswordHash();
-        $passwordHashed = isset($data["password"]) ? $passwordHash->hash($data["password"]) : '';
+        $passwordHashed = isset($data["PASSWORD"]) ? $passwordHash->hash($data["PASSWORD"]) : '';
 
         $user = new self($data);
         $user->password = $passwordHashed;
@@ -55,7 +55,7 @@ class Users extends DatabaseObject
     // Verify user login
     static public function login($email, $password)
     {
-        $sql = "SELECT * FROM " . static::$table_name . " WHERE email = :email";
+        $sql = "SELECT * FROM " . static::$table_name . " WHERE EMAIL = :email";
         $stmt = self::executeQuery($sql, ['email' => $email]);
         $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
 

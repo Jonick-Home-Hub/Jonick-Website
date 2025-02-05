@@ -39,7 +39,7 @@ class DatabaseObject {
     // Find a record by ID
     static public function findById($id)
     {
-        $sql = "SELECT * FROM " . static::$table_name . " WHERE id = :id LIMIT 1";
+        $sql = "SELECT * FROM " . static::$table_name . " WHERE ID = :id LIMIT 1";
         $stmt = self::executeQuery($sql, ['id' => $id]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result ? static::instantiate($result) : false;
@@ -57,7 +57,7 @@ class DatabaseObject {
     // Create or update the current record
     public function save()
     {
-        return isset($this->id) && $this->id != "" ? $this->update() : $this->create();
+        return isset($this->ID) && $this->ID != "" ? $this->update() : $this->create();
     }
 
     // Create a new record
@@ -76,7 +76,7 @@ class DatabaseObject {
         $stmt = self::executeQuery($sql, $attributes);
 
         if ($stmt) {
-            $this->id = self::$database->lastInsertId();
+            $this->ID = self::$database->lastInsertId();
         }
         return $stmt;
     }
@@ -92,9 +92,9 @@ class DatabaseObject {
 
         $sql = "UPDATE " . static::$table_name . " SET ";
         $sql .= implode(', ', $attribute_pairs);
-        $sql .= " WHERE id = :id";
+        $sql .= " WHERE ID = :id";
 
-        $attributes['id'] = $this->id;
+        $attributes['id'] = $this->ID;
 
         return self::executeQuery($sql, $attributes);
     }
@@ -102,7 +102,7 @@ class DatabaseObject {
     // Delete a record by ID
     static public function delete($id)
     {
-        $sql = "DELETE FROM " . static::$table_name . " WHERE id = :id LIMIT 1";
+        $sql = "DELETE FROM " . static::$table_name . " WHERE ID = :id LIMIT 1";
         return self::executeQuery($sql, ['id' => $id]);
     }
 
@@ -121,7 +121,7 @@ class DatabaseObject {
     {
         $attributes = [];
         foreach (static::$db_columns as $column) {
-            if ($column === 'id') continue;
+            if ($column === 'ID') continue;
             $attributes[$column] = $this->$column;
         }
         return $attributes;

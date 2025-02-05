@@ -1,0 +1,116 @@
+/* Progress View Container */
+.progress-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    pointer-events: none; /* Ensures clicks pass through when hidden */
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s; /* Smooth fade-in/out */
+    visibility: hidden;
+}
+
+/* Stylish spinner with animation */
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1.5s linear infinite;
+}
+
+.loading-text {
+    font-size: 16px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Smooth fade-in and out effect for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Alert box with transitions */
+.alert-toast {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+    visibility: hidden;
+}
+
+/* Error and Success Styles */
+.alert-toast.error {
+    background-color: #f44336;
+}
+
+.alert-toast.success {
+    background-color: #4caf50;
+}
+
+/* Close button */
+#alert-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#alert-close:hover {
+    transform: scale(1.2);
+}
+
+/* Active states for loading overlay and alert box */
+.loading-overlay.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.4s ease, visibility 0s;
+}
+
+.alert-toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
